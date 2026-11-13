@@ -6,32 +6,20 @@ servernaam = "web-01"
 statussen = ("online", "back-up voltooid", "updates beschikbaar")
 details = {"locatie": "Brussel", "beheerder": "Demo"}
 
-# Uitgevoerde opdracht:
-# 1. Definieer maak_serverrapport met een vaste servernaam, *args en **kwargs.
-# 2. Druk servernaam, alle statussen en alle details overzichtelijk af.
-# 3. Roep de functie op met de startdata.
 
 def maak_serverrapport(servernaam, *statussen, **details):
     """Druk een rapport af met variabele statussen en details."""
     print("Server:", servernaam)
     print("Statussen:")
+    # *statussen verzamelt de extra positionele argumenten in een tuple.
     for status in statussen:
         print("-", status)
     print("Details:")
+    # **details verzamelt de benoemde argumenten in een dictionary.
     for naam, waarde in details.items():
         print(naam + ":", waarde)
 
+
 if __name__ == "__main__":
+    # Pak de tuple en dictionary uit bij het aanroepen van de functie.
     maak_serverrapport(servernaam, *statussen, **details)
-
-# Verwachte output van het VOLTOOIDE programma:
-# Server: web-01
-# Statussen:
-# - online
-# - back-up voltooid
-# - updates beschikbaar
-# Details:
-# locatie: Brussel
-# beheerder: Demo
-
-# Hint: *args is een tuple en **kwargs is een dictionary.
