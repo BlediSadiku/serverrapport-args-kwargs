@@ -11,3 +11,15 @@ python3 03_serverrapport_args_kwargs.py
 ```
 
 Er is gewerkt met een kopie van de echte homework-oefening; het origineel blijft ongewijzigd. De voorbeeldbeheerder is geanonimiseerd naar Demo.
+
+## Verbetering
+
+De tweede commit herstelt de koppen `Server:` en `Statussen:` volgens de verwachte uitvoer. Een main-guard voorkomt dat importeren meteen een rapport afdrukt.
+
+## Tests
+
+```sh
+python3 -B test_serverrapport.py
+```
+
+De tests controleren de verwachte voorbeeldoutput, een server zonder optionele argumenten, eigen statussen en details, importeren zonder uitvoer en uitvoering als script.

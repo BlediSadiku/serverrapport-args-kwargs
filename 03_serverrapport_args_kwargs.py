@@ -6,20 +6,23 @@ servernaam = "web-01"
 statussen = ("online", "back-up voltooid", "updates beschikbaar")
 details = {"locatie": "Brussel", "beheerder": "Demo"}
 
-# TODO:
+# Uitgevoerde opdracht:
 # 1. Definieer maak_serverrapport met een vaste servernaam, *args en **kwargs.
 # 2. Druk servernaam, alle statussen en alle details overzichtelijk af.
 # 3. Roep de functie op met de startdata.
 
-def maak_serverrapport(servernaam,*statussen,**details):
-    print("-", servernaam)
+def maak_serverrapport(servernaam, *statussen, **details):
+    """Druk een rapport af met variabele statussen en details."""
+    print("Server:", servernaam)
+    print("Statussen:")
     for status in statussen:
         print("-", status)
     print("Details:")
     for naam, waarde in details.items():
         print(naam + ":", waarde)
 
-maak_serverrapport(servernaam, *statussen, **details)
+if __name__ == "__main__":
+    maak_serverrapport(servernaam, *statussen, **details)
 
 # Verwachte output van het VOLTOOIDE programma:
 # Server: web-01
